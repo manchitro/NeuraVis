@@ -1,11 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuraVis</title>
-</head>
-<body>
-    <h1>hello world</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuraVis - Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand d-flex" href="/index.html">
+        <img
+          class="m-auto"
+          src="assets/images/neuraVis.png"
+          width="40"
+          height="40"
+          alt=""
+        />
+      </a>
+      <a class="navbar-brand" href="#">NeuraVis</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/neural-network"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Neural Network
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/neural-network/index.html"
+                >Introduction</a
+              >
+              <a class="dropdown-item" href="#">Terminologies</a>
+              <a class="dropdown-item" href="#">Perceptrons</a>
+              <a class="dropdown-item" href="#">Sigmoid Neurons</a>
+              <a class="dropdown-item" href="#"
+                >A Network to Classify Handwritten Digits</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Author</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      role="main"
+      class="container-sm my-4 border-dark border-right border-left"
+    >
+      <h1 class="mb-2">Welcome to NeuraVis!</h1>
+      <p class="">
+        Here we'll learn about neural networks, how they work. Don't worry if
+        you're not familiar with the concepts of machine learning or neural
+        networks. This guide will walk you through all of them and explain each
+        in the simplest way possible!
+      </p>
+      <img
+        src="./assets/images/brain_neurons_stretch.jpg"
+        class="img-fluid mb-4"
+        alt="Neurons in a Brain"
+      />
+      <h1 class="mb-2">What exaclty is a Neural Network?</h1>
+      <p class="">
+        Neural networks are our attempt on mimicing the workings of a biological
+        brain. The word "neural" comes from neurons, the fundamental unit of a
+        brain. There are billions of neurons in a human brain and there are
+        trillions of connections between them. Together they can solve a lot of
+        problems. Problems that might seem trivial at first. But if those same
+        problems are presented to a computer, they become extremely difficult,
+        or even impossible in some cases. These tasks include:
+      </p>
+      <ul>
+        <li>Speech Recognition</li>
+        <li>Image Content Recognition</li>
+        <li>Handwriting Recognition</li>
+      </ul>
+      <h3>Speech Recognition</h3>
+      <p>
+        When you hear a family member's or a friend's voice, you can usually
+        recognize them instantly. Or when you're walking through the street and
+        hear your favorite songs playing, you can instantly tell which song it
+        is. How does your brain do that? Well, we don't have an exact answer
+        yet. The workings of a brain is still very much mysterious.
+      </p>
+      <img
+        src="./assets/images/speech_recognition.png"
+        alt=""
+        class="float-right px-3"
+        width="300px"
+      />
+      <p>
+        If you try to write a comupter program to recognize a voice, the task
+        suddenly becomes extremely difficult. Do I tell the computer to split up
+        the audio file into different syllables? How does the program recognize
+        individual syllables? Even if it can do that how do we tackle different
+        accents? How do we differentiate between different person's voices?
+      </p>
+      <p>
+        Although it seems impossible, you might already know that this has been
+        done. How? That's right, through machine learning. Because of machine
+        learning, we have programs that not only can turn our speech into text
+        but also can recognize different voices.
+      </p>
+      <h3>Image Content Recognition</h3>
+      <p>
+        Just like recognizing speech, we have sophisticated programs that can
+        see an image and tell what objects are in that image. This falls under a
+        specific sector of Artificial Intelligence called Computer Vision.
+      </p>
+      <img
+        src="./assets/images/computer_vision.png"
+        alt="computer vision"
+        class="img-fluid mb-4"
+      />
+      <p>
+        As seen in the picture above, a neural network can learn to recognize
+        basic shapes in street scene. We also have programs that can recognize
+        person from their faces. This is called face detection and it is
+        commonly used a biometric security measure.
+      </p>
+      <h3>Handwriting Recognition</h3>
+    </div>
+
+    <div
+      class="footer p-3 d-flex flex-row justify-content-end bg-primary text-light"
+    >
+      <span>NeuraVis © Md. Sazid Uddin</span>
+    </div>
+  </body>
 </html>
