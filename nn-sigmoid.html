@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NeuraVis - Neural Network</title>
+    <title>NeuraVis - Signmoid Neurons</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
@@ -63,9 +63,9 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item active dropdown">
+          <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle active"
               href="#"
               id="navbarDropdownMenuLink"
               data-toggle="dropdown"
@@ -75,11 +75,9 @@
               Neural Network
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item active" href="#"
-                >Introduction</a
-              >
+              <a class="dropdown-item " href="nn-intro.html">Introduction</a>
               <a class="dropdown-item" href="nn-perceptron.html">Perceptrons</a>
-              <a class="dropdown-item " href="nn-sigmoid.html">Sigmoid Neurons</a>
+              <a class="dropdown-item active" href="nn-sigmoid.html">Sigmoid Neurons</a>
               <a class="dropdown-item disabled" href="#"
                 >A Network to Classify Handwritten Digits</a
               >
@@ -98,37 +96,22 @@
       role="main"
       class="container-sm my-4 border-dark border-right border-left"
     >
-      <h1 class="mb-2">An Introduction to Neural Networks!</h1>
+      <h1 class="mb-2">Sigmoid Neurons</h1>
       <p class="">
-        A Neural network is a system that takes some input and gives one or more outputs. But that just sounds like a normal computer program. What makes Neural Networks special is that it can "learn" to generate the correct output. But how does a Neural Network learn? It learns by training on sample input and outputs. By analyzing the training samples it can tweak its inner working to better suit them for producing desired result new inputs that it has never seen before. 
+        Previously, we learnt about perceptrons and how they take binary inputs and produce a binary output. <br>
+        Sigmoid neurons are almost identical to perceptrons. The only difference is that, sigmoids take any under between 0 and 1 as inputs and outputs the same.
       </p>
-      <img
-        src="./assets/images/neural_network.png"
-        class="img-fluid my-4"
-        alt=""
-      />
+      <img src="./assets/images/sigmoid-example-01.jpg" alt="Sigmoid Neuron Example" class="w-50">
+      <p>A sigmoid's input and output might look something like the above image. See it is no longer constrained as binary but any floating point number between 0 and 1.</p>
       <p>
-          As seen in the image above, a neural network has three type of layers, and input layer that takes the input, an output layer that gives the output and a hidden layer which we'll discuss more in depth later in our journey. The circles are called neurons and as you can see they are connected like in a biological brain.<br>
-          A neural network can be compared to making a decision in real life. Let's say you are planning to go on a trip with your friends. Wether you decide to go or not might depend on different factors. Such as:
-          <ol>
-              <li>Can you afford the trip?</li>
-              <li>Are you interested enough in the place you're going to?</li>
-              <li>Is your best friend going with you?</li>
-          </ol>
-          <img
-            src="./assets/images/trip_decision-01.jpg"
-            class="img-fluid my-4"
-            alt=""
-          />
-          These are simple yes/no questions. The more answers in the affirmative, the more you're likely to go on the trip. But, some of these factors might be more important than the others. For example, it might be more important to you that your best friend goes with you than anything else. Then if he/she is going you won't care much wether you can afford the trip (borrow the money) or you're interested in the place or not. These two now have less importance, or less "weight" as called in neural networks. <br>
-          Each of these decisions act as an input neuron in your network. Each has an input value (yes/no) and some weight (you assign weight however you see fit) and the network can make that decision for you. These neurons are called Perceptrons, which we'll learn more about in the next section. Click next to continue reading about the Perceptrons.
+        
       </p>
       <div class="page-nav d-flex flex-row justify-content-between">
-          <a href="index.html">< Previous</a>
-          <a href="nn-perceptron.html">Next ></a>
+        <a href="nn-perceptron.html">< Previous</a>
+        <a href="#">Next ></a>
       </div>
     </div>
-    
+
     <div
       class="footer p-3 d-flex flex-row justify-content-end bg-primary text-light"
     >
