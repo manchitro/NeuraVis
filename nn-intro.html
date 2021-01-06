@@ -32,10 +32,14 @@
         <script src="./assets/js/active.js"></script>
         <div role="main" class="container-sm my-4 border-dark border-right border-left">
             <h1 class="mb-2">An Introduction to Neural Networks!</h1>
-            <p class="">A Neural network is a system that takes some input and gives one or more outputs. But that just sounds like a normal computer program. What makes Neural Networks special is that it can "learn" to generate the correct output. But how does a Neural Network learn? It learns by training on sample input and outputs. By analyzing the training samples it can tweak its inner working to better suit them for producing desired result new inputs that it has never seen before.</p>
+            <p class="">
+                A Neural network is a system that takes some input and gives one or more outputs. But that just sounds like a normal computer program. What makes Neural Networks special is that it can go from knowing nothing about generating a desired output to "learn" to generate the correct output. But how does a Neural Network learn? It learns by training on sample inputs and outputs, each pair of input and desired output is called a training sample. <br />
+                By analyzing the training samples it can tweak its inner workings to better suit them for producing desired results for brand new inputs that it has never seen before. It's just like giving a network a problem and telling it to solve it without telling it how to do so, then when it fails to produce a correct result, we will show the network what should have been the output so that it can change itself so that it can produce that output the next time around. <br />
+                If we train like this on enough examples, we can be confident that after the training session, the network will be able to tackle similar problems in general, not just the problems it saw in the training session.
+            </p>
             <img src="./assets/images/neural_network.png" class="img-fluid my-4 p-5 w-100" alt="" />
             <p>
-                As seen in the image above, a neural network has three type of layers, and input layer that takes the input, an output layer that gives the output and a hidden layer which we'll discuss more in depth later in our journey. The circles are called neurons and as you can see they are connected like in a biological brain.<br />
+                As seen in the image above, a neural network has three type of layers, an input layer that takes the input, an output layer that gives the output and a hidden layer which we'll discuss more in depth later in our journey. The circles are called neurons and as you can see they are connected like in a biological brain.<br />
                 A neural network can be compared to making a decision in real life. Let's say you are planning to go on a trip with your friends. Wether you decide to go or not might depend on different factors. Such as:
             </p>
             <ol>
@@ -45,8 +49,8 @@
             </ol>
             <img src="./assets/images/trip_decision-01.jpg" class="img-fluid my-4 w-100" alt="" />
             <p>
-                These are simple yes/no questions. The more answers in the affirmative, the more you're likely to go on the trip. But, some of these factors might be more important than the others. For example, it might be more important to you that your best friend goes with you than anything else. Then if he/she is going you won't care much wether you can afford the trip (borrow the money) or you're interested in the place or not. These two now have less importance, or less "weight" as called in neural networks. <br />
-                Each of these decisions act as an input neuron in your network. Each has an input value (yes/no) and some weight (you assign weight however you see fit) and the network can make that decision for you. These neurons are called Perceptrons, which we'll learn more about in the next section. Click next to continue reading about the Perceptrons.
+                These are simple yes/no questions. The more answers in the affirmative, the more you're likely to go on the trip. <br> But, some of these factors might be more important than others. For example, it might be more important to you that your best friend goes with you than anything else. Then if he/she is going you won't care much wether you can afford the trip (you can borrow the money) or you're interested in the place or not. These two now have less importance, or less "weight" as called in neural networks. <br />
+                Each of these decisions act as an input neuron in your network. Each has an input value (yes/no) and some weight (you assign weight however you see fit) and the network can make that decision for you. These neurons are called Perceptrons, which we'll learn more about in the next section. Click next to continue reading about Perceptrons.
             </p>
             <div class="page-nav d-flex flex-row justify-content-between">
                 <a href="index.html">< Previous</a>

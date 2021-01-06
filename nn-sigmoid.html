@@ -30,15 +30,35 @@
             include("./partials/nav.html", document.currentScript);
         </script>
         <script src="./assets/js/active.js"></script>
+        <div class="ud d-flex justify-content-center bg-primary py-2 text-light">
+            Page under development
+        </div>
         <div role="main" class="container-sm my-4 border-dark border-right border-left">
             <h1 class="mb-2">Sigmoid Neurons</h1>
             <p class="">
                 Previously, we learnt about perceptrons and how they take binary inputs and produce a binary output. <br />
-                Sigmoid neurons are almost identical to perceptrons. The only difference is that, sigmoids take any under between 0 and 1 as inputs and outputs the same.
+                Sigmoid neurons are almost identical to perceptrons. The only difference is that, sigmoids take any floating point number between 0 and 1 as inputs and outputs the same.
             </p>
-            <img src="./assets/images/sigmoid-example-01.jpg" alt="Sigmoid Neuron Example" class="w-50" />
-            <p>A sigmoid's input and output might look something like the above image. See it is no longer constrained as binary but any floating point number between 0 and 1.</p>
-            <p></p>
+            <img src="./assets/images/sigmoid-example-01.jpg" alt="Sigmoid Neuron Example" class="w-100" />
+            <p>A sigmoid's input and output might look something like the above image. See that it is no longer constrained as binary but any floating point number between 0 and 1.</p>
+            <p>This tiny change results in some incredible behavioural upgrades to our Neural Network. We are no longer stuck with limited inputs and outputs. We can now fine tune our network to cause small changes in output in the event of small changes in inputs.</p>
+            <p>You might remember from our discussion of <a href="nn-perceptron.html">Perceptrons</a> that the output is calculated with the expression:</p>
+            <div class="math w-75 mx-auto mb-3">∑<sub>j</sub>w<sub>j</sub>x<sub>j</sub> + b</div>
+
+            <p>We can make some notational changes to make it easier for us to write the weighted sum as a dot product:</p>
+            <div class="math w-75 mx-auto mb-3">∑<sub>j</sub>w<sub>j</sub>x<sub>j</sub> + b = w . x + b</div>
+            <p>where, <strong>w</strong> and <strong>x</strong> are vectors whose elements are weights and inputs respectively. <strong>w</strong> and <strong>x</strong> look like this:</p>
+            <div class="math w-75 mx-auto mb-3">
+                w = [w<sub>1</sub>, w<sub>2</sub> ... w<sub>j</sub>] <br />
+                x = [x<sub>1</sub>, x<sub>2</sub> ... x<sub>j</sub>]
+            </div>
+            <p>Their dot product will be:</p>
+            <div class="math w-75 mx-auto mb-3">(x<sub>1</sub>*w<sub>1</sub>) + (x<sub>2</sub>*w<sub>2</sub>) + (x<sub>3</sub>*w<sub>3</sub>)</div>
+            <p>which ultimately is our original weighted sum. Therefore:</p>
+            <div class="math w-75 mx-auto mb-3">∑<sub>j</sub>w<sub>j</sub>x<sub>j</sub> = w . x</div>
+
+            
+
             <div class="page-nav d-flex flex-row justify-content-between">
                 <a href="nn-perceptron.html">< Previous</a>
                 <a href="#">Next ></a>

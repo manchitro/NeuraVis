@@ -32,23 +32,23 @@
         <script src="./assets/js/active.js"></script>
         <div role="main" class="container-sm my-4 border-dark border-right border-left">
             <h1 class="mb-2">Perceptrons</h1>
-            <p class="">Revisiting the decision making example from the Intro to Neural Network section, we can build a simple neural network that looks like this:</p>
+            <p class="">Revisiting the decision making example from the <a href="nn-intro.html">Intro to Neural Networks</a> section, we can build a simple neural network that looks like this:</p>
             <img src="./assets/images/trip_decision-01.jpg" class="my-4 w-100" alt="" />
             <p>
-                This network takes three yes/no (binary) input and decides wether you want to go on the trip or not. The righmost neuron here is a Perceptron. Perceptrons take some binary input and outputs a binary number (yes/no). Each input has a weight indicating the importance relative to other inputs that can alter the final output. <br />
+                This network takes three yes/no (binary) input and decides wether you want to go on the trip or not. The righmost neuron here is a Perceptron. (Note that, the inputs are not perceptrons but are drawn like one) <br> Perceptrons take some binary input and outputs a binary number (yes/no). Each input has a weight indicating the importance relative to other inputs that can alter the final output. <br />
                 This is what a single perceptron looks like:
             </p>
             <img src="./assets/images/perceptron-01.jpg" class="my-4 w-100" alt="" />
             <p>
-                Here, x<sub>1</sub>, x<sub>2</sub> and x<sub>3</sub> inputs for our perceptron and w<sub>1</sub>, w<sub>2</sub> and w<sub>3</sub> are weights of the corresponding input. <br />
-                There is one property of a perceptron that we haven't yet talked about. It's called <strong>bias</strong>. Just as inputs have weights, the perceptron has a bias. Bias is a number that decides how likely the perceptron is to produce an affirmative output. It can be compared to the trip decision making network as "how likely you are to go on a trip in general". Then no matter what the inputs are, the possibility of you going on a trip greatly increases if your bias is high. To completely understand how the output is calculated, we need to get into some math. So buckle up!
+                Here, <strong>x<sub>1</sub>, x<sub>2</sub> and x<sub>3</sub></strong> are inputs for our perceptron and <strong>w<sub>1</sub>, w<sub>2</sub> and w<sub>3</sub></strong> are weights of the corresponding input. <br /><br />
+                There is one property of a perceptron that we haven't yet talked about. It's called <strong>bias</strong>. Just as inputs have weights, the perceptron itself has a bias. Bias is a number that decides how likely the perceptron is to produce an affirmative output. It can be compared to the trip decision making network as "how likely you are to go on a trip in general". Then no matter what the inputs and their weights are, the possibility of you going on a trip greatly increases if your bias is high. To completely understand how the output is calculated, we need to get into some math. So buckle up!
             </p>
             <p>Output of a perceptron is binary (1 or 0 / yes or no) and it is calculated as follows:</p>
             <p>1. First we calculate the weighted sum of the inputs (multiply weight with corresponding input values and add all of them together)</p>
             <div class="math w-75 mx-auto mb-3">(x<sub>1</sub>*w<sub>1</sub>) + (x<sub>2</sub>*w<sub>2</sub>) + (x<sub>3</sub>*w<sub>3</sub>)</div>
             <p>2. Then we add the bias (denoted as b)</p>
             <div class="math w-75 mx-auto mb-3">(x<sub>1</sub>*w<sub>1</sub>) + (x<sub>2</sub>*w<sub>2</sub>) + (x<sub>3</sub>*w<sub>3</sub>) + b</div>
-            <p>3. Lastly we comapre if the value of this expression is greater than 0 or not. If it is the output of the perceptron is 1, otherwise 0</p>
+            <p>3. Lastly we compare if the value of this expression is greater than 0 or not. If it is the output of the perceptron is 1, otherwise 0</p>
             <div class="math w-75 mx-auto mb-3">
                 if (x<sub>1</sub>*w<sub>1</sub>) + (x<sub>2</sub>*w<sub>2</sub>) + (x<sub>3</sub>*w<sub>3</sub>) + b > 0 , output = 1 <br />
                 if (x<sub>1</sub>*w<sub>1</sub>) + (x<sub>2</sub>*w<sub>2</sub>) + (x<sub>3</sub>*w<sub>3</sub>) + b <= 0 , output = 0
