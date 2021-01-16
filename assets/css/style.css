@@ -24,3 +24,190 @@ h1,h2,h3,h4,h5,h6{
 .contact-link{
     text-decoration: none;
 }
+
+/* ------------------ visualizer canvas ---------------------- */
+
+/* .tools .color-field
+{
+    height:40px;
+    width:40px;
+    min-height:40px;
+    min-width:40px;
+    cursor:pointer;
+    display:inline-block;
+    box-sizing:border-box;
+    border-radius: 50%;
+    border: 2px solid white;
+
+} */
+/* div
+{
+    display:block;
+} */
+#canvasContainer{
+    z-index: 50;
+    opacity:0.5;
+    width:292px;
+    position:absolute;
+    background: rgb(10, 199, 233);
+    transition: opacity 0.98s ease;
+    
+
+
+}
+#drawingInterface {
+    padding: 5px;
+    margin-bottom: 5px;
+    /* background: rgb(30,35,40); */
+}
+
+.instructions {
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    padding: 5px 0;
+}
+
+
+.board {
+    width: 282px;
+    height: 361px;
+    padding-bottom: 10px;
+}
+.drawing-board {
+    position: relative;
+    display: block;
+}
+.drawing-board, .drawing-board * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+element.style {
+    width: 280px;
+    height: 280px;
+}
+.drawing-board-canvas-wrapper {
+    position: relative;
+    margin: 0;
+    border: 1px solid #ddd;
+}
+.drawing-board-canvas {
+    cursor: crosshair;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.drawing-board-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    background: rgb(10, 199, 233);
+    /* background: rgba(0, 0, 0, 0.2); */
+    z-index: 30;
+}
+.drawing-board-utils-hidden, .drawing-board-controls-hidden {
+    display: none !important;
+}
+
+drawing-board-canvas-wrapper + .drawing-board-controls, .drawing-board-controls + .drawing-board-canvas-wrapper {
+    margin-top: 5px;
+}
+.drawing-board-controls[data-align="right"] {
+    margin: 0 0 0 auto;
+    right: -9.33333px;
+}
+.drawing-board-controls {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0;
+    display: table;
+    border-spacing: 9.33333px 0;
+    position: relative;
+    min-height: 64px;
+}
+
+.drawing-board-control {
+    display: table-cell;
+    border-collapse: separate;
+    vertical-align: middle;
+    font-size: 16px;
+    height: 100%;
+}
+
+/* .drawing-board-control > button:active, .drawing-board-control > button.active {
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ccc;
+} */
+.drawing-board-control-drawingmode > button {
+    margin-right: 2px;
+}
+.drawing-board-control > button {
+    margin: 0;
+    vertical-align: middle;
+}
+.drawing-board-control > button {
+    cursor: pointer;
+    min-width: 64px;
+    line-height: 14px;
+}
+.drawing-board-control > button, .drawing-board-control-colors-rainbows, .drawing-board-control-size .drawing-board-control-inner, .drawing-board-control-size-dropdown {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: none;
+    background-color: rgb(7, 167, 145);
+    padding: 2px 2px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px -2px #121212, inset 0 2px 5px 0 rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 0 1px 3px -2px #121212, inset 0 2px 5px 0 rgba(255, 255, 255, 0.3);
+    height: 64px;
+}
+/* .drawing-board-control-drawingmode-pencil-button {
+    overflow: hidden;
+    /* *text-indent: -9999px; */
+    /* background-image: url(../images/pencil.png); */
+    /* background-position: 50% 50%; */
+    /* object-fit: cover;
+    
+    background-repeat: no-repeat;
+} */ 
+
+.drawing-board, .drawing-board * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+button {
+    appearance: button;
+    /* -webkit-writing-mode: horizontal-tb !important; */
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    /* background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59)); */
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    /* border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133)); */
+    border-image: initial;
+}
+
+

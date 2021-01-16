@@ -2,9 +2,11 @@
 // <script> include('path/to/file.html', document.currentScript) </script>
 
 function include(file, element) {
+    console.log(file);
     req(file)
         .then((code) => insertCode(code, element))
         .catch(() => showError());
+
 }
 
 function insertCode(code, referenceElem) {
