@@ -14,6 +14,7 @@
 		</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>A Network to Classify Handritten Digits</title>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/style.css" />
@@ -31,18 +32,18 @@
 		<script src="./assets/js/active.js"></script>
 		<div class="ud d-flex justify-content-center bg-primary py-2 text-light">Page under development</div>
 		<div role="main" class="container-sm my-4 border-dark border-right border-left">
-			<h1 class="mb-2">A Network to Classify Handwritten Digits</h1>
-			<p>Now we finally move on to creating our network.</p>
-			<p>We first need to learn some names of different parts of our network. Conisder this image of network:</p>
-			<img src="./assets/images/example-net.png" class="mw-100 h-auto" alt="" />
-			<p>The leftmost layer contains the input neurons and the rightmost layer contains the output neurons. In this particular network we only have one output neuron. Between the input and output layers, there are hidden layers. Which is also in this case only one layer. Other networks might have more layers. There is no need to worry about the term "hidden", here it simply means not an input or output.Now, how do we determine the structure of the input layer? It is pretty intuitive. Let's say we want to find wether a given 64x64 greyscale image contains the number 5 written in it. Since we need to feed the network the whole image and images consists of pixels, we can have 64x64 = 4096 input neurons for each pixel. Since our image is greyscale, ech pixel can have a greyscale value of 0 to 1. 0 being completely black and 1 being completely white. Everything in between is a shade of gray. 0.5 being the middle point.</p>
-			<p>For the output, there can be only one single output neuron, since we just want to know wether the image contains a 5 or not. It's a binary result. Threrefore output of less than 0.5 indicates false (input is not a 5) and greater than 0.5 indicates true (input is a 5).</p>
-			<p>While the input and output layers are pretty straightforward, its the hidden layers where we want to get more creative. There are no set rules on how to design the hidden layers but researchers over the years have established some design heuristics with some rules of thumb that can help designers get the behaviours they expect from the hidden layers.</p>
-			<p><strong>Feed-Forward networks: </strong>A network where the output of one layer is used as the input of another layer. We've been discussing about feed-forward networks all this time. In a feed-forward network information never fed back, it only flows forward. You can imagine what sort problems we'd face if we had loops in a network. Then a situation might arise where the input of a layer depender on its output. That is hard to make sense of so we refrain from loops. But there are another kind of neural network that can have loops. These are called recurrent neural networks. We will stick to feed-forward networks for now</p>
+			<h1 class="mb-2">A Network to Classify Handritten Digits</h1>
+			<p>Now we return to hand-written digits recognition. We're gonna work with only one digit at a time for now. An image containing multiple digits can be processed (by first another network dividing them into single digits and another network recognizing those single digits). But we're gonna focus on single digits, we assume that our images are already broken. Individual digits might look like this:</p>
+			<img src="./assets/images/example-digits.png" class="mw-100 h-auto mb-4" alt="" />
+			<p>We'll use a three layer network for classifying our digits: </p>
+			<img src="./assets/images/threeLayerNetwork.png" class="mw-100 h-auto" alt="" />
+			<p>The input layer has 784 neurons, one for each pixel of a 28x28 image. This is the resolution of our many scanned handritten images. Just like the image of digits at the start of this page. Most of the input neurons are not shown in the image for simplicity. Each input neuron has a greyscale value. 0.0 denoting white and 1.0 denoting black and inbetween values gradually darkening shades of grey.</p>
+			<p>Our hidden layer has 15 neurons. The number of neurons is denoted by 'n'. This is an arbritary number and we'll experiment with with other number of neurons and even more layers. For now we'll stick to one hidden layer with 15 neurons.</p>
+			<p>The output layer has 10 neurons, each for digits 0-9. If the first neuron fires, meaning if its value is close to 1 or 1, then we can say that the network thinks the given image is a 0. If the second neuron fires then the network thinks the given image is a 1 and so on. The neuron with the highest value is what the network thinks the image is.</p>
 			<p></p>
 			<div class="page-nav d-flex flex-row justify-content-between">
 				<a href="nn-perceptron.html">< Previous</a>
-				<a href="nn-network">Next ></a>
+				<a href="nn-structure.html">Next ></a>
 			</div>
 		</div>
 		<script>
